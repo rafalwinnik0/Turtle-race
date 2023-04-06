@@ -16,5 +16,6 @@ for player in players:
     new_position += 30
     player.goto(x=-230, y=-new_position)
 
+# trzeba wyslac na gita poprawione
 
 screen.exitonclick()
