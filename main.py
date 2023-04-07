@@ -24,6 +24,7 @@ while is_on:
         turtle.forward(10)
         if turtle.xcor() == 230:
             is_on = False
+            break
 
 
 screen.exitonclick()
