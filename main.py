@@ -1,8 +1,9 @@
 from turtle import Turtle, Screen
+import random
 
 screen = Screen()
 screen.setup(width=500, height=400)
-#user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter the color: ")
+user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter the color: ")
 colors = ["red", "orange", "yellow", "green", "blue"]
 players = ["Rafał", "Tomek", "Kuba", "Krzysiek", "Marcin"]
 turtles = []
@@ -19,12 +20,22 @@ for player in players:
     turtles.append(player)
 
 is_on = True
+winning_color = []
 while is_on:
     for turtle in turtles:
-        turtle.forward(10)
-        if turtle.xcor() == 230:
+        rand = random.randint(0, 10)
+        turtle.forward(rand)
+        if turtle.xcor() > 230:
+            winning_color = turtle.pencolor()
+            print(f"{winning_color} is winner! type: {type(winning_color)}")
+            print(f"{user_bet} is winner! type: {type(user_bet)}")
+                # if user_bet == winning_color:
+                #     print("You've won!")
+                # else:
+                #     print("You've lost!")
             is_on = False
             break
 
+print(winning_color)
 
 screen.exitonclick()
