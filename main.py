@@ -27,15 +27,11 @@ while is_on:
         turtle.forward(rand)
         if turtle.xcor() > 230:
             winning_color = turtle.pencolor()
-            print(f"{winning_color} is winner! type: {type(winning_color)}")
-            print(f"{user_bet} is winner! type: {type(user_bet)}")
-                # if user_bet == winning_color:
-                #     print("You've won!")
-                # else:
-                #     print("You've lost!")
+            if user_bet == winning_color:
+                print("You've won!")
+            else:
+                print("You've lost!")
             is_on = False
             break
-
-print(winning_color)
 
 screen.exitonclick()
