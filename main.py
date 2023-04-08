@@ -20,7 +20,6 @@ for player in players:
     turtles.append(player)
 
 is_on = True
-winning_color = []
 while is_on:
     for turtle in turtles:
         rand = random.randint(0, 10)
